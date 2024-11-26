@@ -1,7 +1,7 @@
 function App() {
   return (
-    <div className="App">
-      hello world
+    <div className="text-lg bold">
+      Welcome to my React App styled with Ubuntu font!
     </div>
   );
 }
