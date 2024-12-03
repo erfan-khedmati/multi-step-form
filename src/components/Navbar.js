@@ -32,7 +32,7 @@ export default function Navbar() {
         <div className='max-h-[550px] h-screen relative pl-10 pr-32 py-1 rounded-xl bg-slate-300 overflow-hidden'>
             <div className='z-20 relative w-full h-full'>
                 {steps.map((step) => {
-                    return <NavLink key={step.id} to={`/page${step.id}`} className="flex gap-3 items-center my-8 text-white">
+                    return <NavLink key={step.id} to={step.id != 1 ? `/page${step.id}`: "/"} className="flex gap-3 items-center my-8 text-white">
                         <div className=' border-light_blue border-2 text-light_blue rounded-full w-10 h-10 flex items-center justify-center'>{step.id}</div>
                         <div className='flex flex-col'>
                             <p className='text-light_gray text-xs'>{step.placeHolder}</p>
