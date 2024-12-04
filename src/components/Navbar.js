@@ -33,7 +33,7 @@ export default function Navbar() {
                 {steps.map((step) => {
                     return (
                         <div className='flex items-center gap-4 text-white py-3' key={step.id}>
-                            <NavLink to={step.id != 1 ? `/page${step.id}` : "/"} className={({ isActive }) => isActive ? "flex items-center justify-center rounded-full w-8 h-8 font-bold text-marine_blue bg-light_blue" : "flex items-center justify-center font-bold border-2 border-light_blue rounded-full w-8 h-8"}>
+                            <NavLink to={step.id !== 1 ? `/page${step.id}` : "/"} className={({ isActive }) => isActive ? "flex items-center justify-center rounded-full w-8 h-8 font-bold text-marine_blue bg-light_blue" : "flex items-center justify-center font-bold border-2 border-light_blue rounded-full w-8 h-8"}>
                                 {step.id}
                             </NavLink>
                             <div className='flex flex-col'>
@@ -43,7 +43,7 @@ export default function Navbar() {
                         </div>)
                 })}
             </div>
-            <img src={SideBarImg} className='absolute bottom-0 left-0 w-full z-10' />
+            <img alt="background" src={SideBarImg} className='absolute bottom-0 left-0 w-full z-10' />
         </div >
     )
 }
