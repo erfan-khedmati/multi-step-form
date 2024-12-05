@@ -3,7 +3,8 @@ module.exports = {
   content: [
     "./src/App.js",
     "./src/components/Navbar.js",
-    "./src/Pages/Page1.js"
+    "./src/Pages/Page1.js",
+    "./src/components/NavigatorButton.js"
   ],
   theme: {
     extend: {
