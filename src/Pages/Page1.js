@@ -22,15 +22,15 @@ export default function Page1() {
       {/* Form */}
       <form className='flex flex-col gap-6 w-full lg:h-full' onSubmit={handleSubmit}>
         <div className='flex flex-col'>
-          <label for="name" className='text-marine_blue'>Name</label>
+          <label htmlFor="name" className='text-marine_blue'>Name</label>
           <input type='text' id='name' className='w-full mt-2 border border-light_gray rounded-md py-2 px-3' placeholder='e.g.Stephen King' required />
         </div>
         <div className='flex flex-col'>
-          <label for="email" className='text-marine_blue'>Email Address</label>
+          <label htmlFor="email" className='text-marine_blue'>Email Address</label>
           <input type='email' id='email' className='w-full mt-2 border border-light_gray rounded-md py-2 px-3' placeholder='e.g.StephenKing@lorem.com' required />
         </div>
         <div className='flex flex-col'>
-          <label for="phone" className='text-marine_blue'>Phone Number</label>
+          <label htmlFor="phone" className='text-marine_blue'>Phone Number</label>
           <input type='tel' id='phone' className='w-full mt-2 border border-light_gray rounded-md py-2 px-3' placeholder='e.g. +1 234 567 890' required />
         </div>
         {/* Next */}
