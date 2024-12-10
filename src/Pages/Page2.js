@@ -12,15 +12,15 @@ function Page2() {
   const [monthly, setMonthly] = useState(true);
 
   return (
-    <div className='bg-white p-3 lg:p-0 rounded-md lg:rounded-none lg:h-full  lg:max-w-[1000px] lg:pt-10 lg:px-20 flex flex-col gap-10 items-start'>
+    <div className='pb-32 lg:pb-0 overflow-hidden lg:overflow-auto bg-white p-3 lg:p-0 rounded-md lg:rounded-none lg:h-full  lg:max-w-[1000px] lg:pt-10 lg:px-20 flex flex-col gap-10 items-start'>
       {/* Title */}
       <div>
         <h1 className='text-3xl font-bold'>Select your plane</h1>
         <h3 className="text-cool_gray mt-2">You have the options monthly or yearly biling.</h3>
       </div>
       {/* Form */}
-      <form className='grid grid-cols-3 gap-x-5 gap-y-7'>
-        <label>
+      <form className='grid grid-cols-3 gap-x-5 gap-y-7 w-full'>
+        <label className='col-span-3 lg:col-span-1'>
           {/* Hidden radio button */}
           <input
             type='radio'
@@ -33,25 +33,27 @@ function Page2() {
             className='hidden'
           />
           {/* Label elements */}
-          <div className={`border py-6 pr-10 pl-5 rounded-lg ${selectPlane == "Arcade" ? 'border-marine_blue bg-magnolia' : "border-light_gray"}`}>
+          <div className={`flex lg:block items-center gap-3 lg:min-w-0 border py-4 lg:py-6 pr-10 pl-5 rounded-lg ${selectPlane == "Arcade" ? 'border-marine_blue bg-magnolia' : "border-light_gray"}`}>
             {/* img */}
             <img alt='arcade' src={ArcadeImg} />
             {/* Info */}
-            <h3 className='text-marine_blue text-xl font-medium mt-10'>Arcade</h3>
-            <h4 className='text-cool_gray'>{monthly ? (
-              "$9/mo"
-            ):(
-             " $90/yr"
-            )} </h4>
-            {
-              !monthly ? (
-                <p className='text-marine_blue'>2 months free</p>
-              ) :
-              ""
-            }
+            <div className='lg:mt-10'>
+              <h3 className='text-marine_blue text-xl font-medium'>Arcade</h3>
+              <h4 className='text-cool_gray'>{monthly ? (
+                "$9/mo"
+              ) : (
+                " $90/yr"
+              )} </h4>
+              {
+                !monthly ? (
+                  <p className='text-marine_blue'>2 months free</p>
+                ) :
+                  ""
+              }
+            </div>
           </div>
         </label>
-        <label>
+        <label className='col-span-3 lg:col-span-1'>
           {/* Hidden radio button */}
           <input
             type='radio'
@@ -64,25 +66,27 @@ function Page2() {
             className='hidden'
           />
           {/* Label elements */}
-          <div className={`border py-6 pr-10 pl-5 rounded-lg ${selectPlane == "Advanced" ? 'border-marine_blue bg-magnolia' : "border-light_gray"}`}>
+          <div className={`flex lg:block items-center gap-3 lg:min-w-0 border py-4 lg:py-6 pr-10 pl-5 rounded-lg ${selectPlane == "Advanced" ? 'border-marine_blue bg-magnolia' : "border-light_gray"}`}>
             {/* img */}
             <img alt='advanced' src={AdvancedImg} />
             {/* Info */}
-            <h3 className='text-marine_blue text-xl font-medium mt-10'>Advanced</h3>
-            <h4 className='text-cool_gray'>{monthly ? (
-              "$12/mo"
-            ):(
-             " $120/yr"
-            )} </h4>
-            {
-              !monthly ? (
-                <p className='text-marine_blue'>2 months free</p>
-              ) :
-              ""
-            }
+            <div className='lg:mt-10'>
+              <h3 className='text-marine_blue text-xl font-medium'>Advanced</h3>
+              <h4 className='text-cool_gray'>{monthly ? (
+                "$12/mo"
+              ) : (
+                " $120/yr"
+              )} </h4>
+              {
+                !monthly ? (
+                  <p className='text-marine_blue'>2 months free</p>
+                ) :
+                  ""
+              }
+            </div>
           </div>
         </label>
-        <label>
+        <label className='col-span-3 lg:col-span-1'>
           {/* Hidden radio button */}
           <input
             type='radio'
@@ -95,22 +99,24 @@ function Page2() {
             className='hidden'
           />
           {/* Label elements */}
-          <div className={`border py-6 pr-10 pl-5 rounded-lg ${selectPlane == "Pro" ? 'border-marine_blue bg-magnolia' : "border-light_gray"}`}>
+          <div className={`flex lg:block items-center gap-3 lg:min-w-0 border py-4 lg:py-6 pr-10 pl-5 rounded-lg ${selectPlane == "Pro" ? 'border-marine_blue bg-magnolia' : "border-light_gray"}`}>
             {/* img */}
             <img alt='Pro' src={ProImg} />
             {/* Info */}
-            <h3 className='text-marine_blue text-xl font-medium mt-10'>Pro</h3>
-            <h4 className='text-cool_gray'>{monthly ? (
-              "$15/mo"
-            ):(
-             " $150/yr"
-            )} </h4>
-            {
-              !monthly ? (
-                <p className='text-marine_blue'>2 months free</p>
-              ) :
-              ""
-            }
+            <div className='lg:mt-10'>
+              <h3 className='text-marine_blue text-xl font-medium'>Pro</h3>
+              <h4 className='text-cool_gray'>{monthly ? (
+                "$15/mo"
+              ) : (
+                " $150/yr"
+              )} </h4>
+              {
+                !monthly ? (
+                  <p className='text-marine_blue'>2 months free</p>
+                ) :
+                  ""
+              }
+            </div>
           </div>
         </label>
 
