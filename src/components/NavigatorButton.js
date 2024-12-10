@@ -18,7 +18,7 @@ function NavigatorButton({ nextPage = undefined, prevPage = undefined, handleNav
     }
     
     return (
-        <div className='flex justify-between gap-5 lg:w-full lg:mt-auto lg:ml-auto absolute lg:static bottom-0 left-0 w-full p-5 lg:p-0 bg-white'>
+        <div className='flex justify-between gap-5 lg:w-full lg:mt-auto lg:ml-auto fixed lg:static bottom-0 left-0 w-full p-5 lg:p-0 bg-white'>
             {
                 prevPage ? (
                     <button className='px-6 py-3 text-light_gray rounded-md hover:text-marine_blue' onClick={handlePrevPage}>

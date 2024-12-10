@@ -47,7 +47,7 @@ export default function Navbar() {
             {/* Desktop backgorund */}
             <img alt="background" src={SideBarDektopImg} className='hidden lg:block lg:absolute bottom-0 left-0 w-full z-10' />
             {/* Mobile Bakcground */}
-            <img alt="background" src={SideBarMobileImg} className='w-screen h-full object-cover absolute top-0 left-0 lg:hidden z-10' />
+            <img alt="background" src={SideBarMobileImg} className='w-screen max-h-[200px] object-cover fixed top-0 left-0 lg:hidden z-10' />
         </div >
     )
 }
